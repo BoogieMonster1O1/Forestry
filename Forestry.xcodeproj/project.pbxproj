@@ -11,8 +11,14 @@
 		64CB4F322B1A4454004F2602 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F312B1A4454004F2602 /* ContentView.swift */; };
 		64CB4F342B1A4457004F2602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64CB4F332B1A4457004F2602 /* Assets.xcassets */; };
 		64CB4F372B1A4457004F2602 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64CB4F362B1A4457004F2602 /* Preview Assets.xcassets */; };
-		64CB4F392B1A4457004F2602 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F382B1A4457004F2602 /* Persistence.swift */; };
-		64CB4F3C2B1A4457004F2602 /* Forestry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F3A2B1A4457004F2602 /* Forestry.xcdatamodeld */; };
+		64CB4F452B1A47B1004F2602 /* SidebarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F442B1A47B1004F2602 /* SidebarEntry.swift */; };
+		64CB4F472B1A5694004F2602 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F462B1A5694004F2602 /* DashboardView.swift */; };
+		64CB4F492B1A56EF004F2602 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F482B1A56EF004F2602 /* ViewModel.swift */; };
+		64CB4F4B2B1A5942004F2602 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F4A2B1A5942004F2602 /* SettingsView.swift */; };
+		64CB4F4D2B1A5D4F004F2602 /* WorkforceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F4C2B1A5D4F004F2602 /* WorkforceView.swift */; };
+		64CB4F4F2B1A5EA0004F2602 /* Published+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F4E2B1A5EA0004F2602 /* Published+Coding.swift */; };
+		64CB4F512B1A5F46004F2602 /* IncidentLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F502B1A5F46004F2602 /* IncidentLogView.swift */; };
+		64CB4F532B1A6232004F2602 /* TeamSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F522B1A6231004F2602 /* TeamSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +27,15 @@
 		64CB4F312B1A4454004F2602 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64CB4F332B1A4457004F2602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64CB4F362B1A4457004F2602 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		64CB4F382B1A4457004F2602 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		64CB4F3B2B1A4457004F2602 /* Forestry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Forestry.xcdatamodel; sourceTree = "<group>"; };
 		64CB4F3D2B1A4457004F2602 /* Forestry.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Forestry.entitlements; sourceTree = "<group>"; };
+		64CB4F442B1A47B1004F2602 /* SidebarEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarEntry.swift; sourceTree = "<group>"; };
+		64CB4F462B1A5694004F2602 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		64CB4F482B1A56EF004F2602 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		64CB4F4A2B1A5942004F2602 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		64CB4F4C2B1A5D4F004F2602 /* WorkforceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkforceView.swift; sourceTree = "<group>"; };
+		64CB4F4E2B1A5EA0004F2602 /* Published+Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Coding.swift"; sourceTree = "<group>"; };
+		64CB4F502B1A5F46004F2602 /* IncidentLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentLogView.swift; sourceTree = "<group>"; };
+		64CB4F522B1A6231004F2602 /* TeamSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +68,19 @@
 		64CB4F2E2B1A4454004F2602 /* Forestry */ = {
 			isa = PBXGroup;
 			children = (
+				64CB4F432B1A47A0004F2602 /* Sidebar */,
 				64CB4F2F2B1A4454004F2602 /* ForestryApp.swift */,
 				64CB4F312B1A4454004F2602 /* ContentView.swift */,
+				64CB4F462B1A5694004F2602 /* DashboardView.swift */,
+				64CB4F482B1A56EF004F2602 /* ViewModel.swift */,
+				64CB4F4A2B1A5942004F2602 /* SettingsView.swift */,
+				64CB4F522B1A6231004F2602 /* TeamSettingsView.swift */,
+				64CB4F4C2B1A5D4F004F2602 /* WorkforceView.swift */,
+				64CB4F502B1A5F46004F2602 /* IncidentLogView.swift */,
 				64CB4F332B1A4457004F2602 /* Assets.xcassets */,
-				64CB4F382B1A4457004F2602 /* Persistence.swift */,
 				64CB4F3D2B1A4457004F2602 /* Forestry.entitlements */,
-				64CB4F3A2B1A4457004F2602 /* Forestry.xcdatamodeld */,
 				64CB4F352B1A4457004F2602 /* Preview Content */,
+				64CB4F4E2B1A5EA0004F2602 /* Published+Coding.swift */,
 			);
 			path = Forestry;
 			sourceTree = "<group>";
@@ -73,6 +91,14 @@
 				64CB4F362B1A4457004F2602 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64CB4F432B1A47A0004F2602 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				64CB4F442B1A47B1004F2602 /* SidebarEntry.swift */,
+			);
+			path = Sidebar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,10 +171,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64CB4F392B1A4457004F2602 /* Persistence.swift in Sources */,
+				64CB4F532B1A6232004F2602 /* TeamSettingsView.swift in Sources */,
+				64CB4F4F2B1A5EA0004F2602 /* Published+Coding.swift in Sources */,
+				64CB4F4D2B1A5D4F004F2602 /* WorkforceView.swift in Sources */,
+				64CB4F492B1A56EF004F2602 /* ViewModel.swift in Sources */,
+				64CB4F452B1A47B1004F2602 /* SidebarEntry.swift in Sources */,
+				64CB4F472B1A5694004F2602 /* DashboardView.swift in Sources */,
+				64CB4F512B1A5F46004F2602 /* IncidentLogView.swift in Sources */,
+				64CB4F4B2B1A5942004F2602 /* SettingsView.swift in Sources */,
 				64CB4F322B1A4454004F2602 /* ContentView.swift in Sources */,
 				64CB4F302B1A4454004F2602 /* ForestryApp.swift in Sources */,
-				64CB4F3C2B1A4457004F2602 /* Forestry.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,19 +381,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		64CB4F3A2B1A4457004F2602 /* Forestry.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				64CB4F3B2B1A4457004F2602 /* Forestry.xcdatamodel */,
-			);
-			currentVersion = 64CB4F3B2B1A4457004F2602 /* Forestry.xcdatamodel */;
-			path = Forestry.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 64CB4F242B1A4454004F2602 /* Project object */;
 }

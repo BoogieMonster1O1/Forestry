@@ -9,12 +9,19 @@ import SwiftUI
 
 @main
 struct ForestryApp: App {
-    let persistenceController = PersistenceController.shared
-
+    var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(viewModel)
+        }.commands {
+            SidebarCommands()
+        }
+        Settings {
+            SettingsView()
+                .environmentObject(viewModel)
+                .frame(width: 800, height: 400)
         }
     }
 }

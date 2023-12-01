@@ -9,77 +9,68 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @State var showIncidentReportSheet = false
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
+                SidebarEntry(image: Image(systemName: "slowmo"), label: "Dashboard", small: "") {
+                    DashboardView()
                 }
-                .onDelete(perform: deleteItems)
+                SidebarEntry(image: Image(systemName: "box.truck"), label: "Inventory", small: "Manage seed and sapling inventory") {
+                    Text("inventory lol")
+                }
+                SidebarEntry(image: Image(systemName: "person.3.sequence"), label: "Workforce", small: "Manage workforce and volunteers") {
+                    WorkforceView()
+                }
+                SidebarEntry(image: Image(systemName: "exclamationmark.triangle.fill"), label: "Incident Log", small: "See past incidents") {
+                    IncidentLogView()
+                }
             }
+            .listStyle(.sidebar)
             .toolbar {
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button(action: {
+                        NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+                    }) {
+                        Image(systemName: "sidebar.leading")
+                    }
+                }
+                
+                ToolbarItem {
+                    Button(action: {
+                        self.showIncidentReportSheet = true
+                    }) {
+                        Image(systemName: "exclamationmark.triangle")
                     }
                 }
             }
             Text("Select an item")
         }
+        .sheet(isPresented: $showIncidentReportSheet, content: incidentReportSheet)
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+    
+    @ViewBuilder
+    func incidentReportSheet() -> some View {
+        VStack {
+            Text("Report an incident")
+                .font(.title)
+            HStack {
+                Button("Cancel") {
+                    showIncidentReportSheet = false
+                }
+                .keyboardShortcut(.escape)
+                Button("Report") {
+                    // TODO: add
+                    showIncidentReportSheet = false
+                }
             }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
     }
 }
