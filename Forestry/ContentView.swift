@@ -14,19 +14,19 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                SidebarEntry(image: Image(systemName: "slowmo"), label: "Dashboard", small: "") {
+                SidebarEntry(image: Image(systemName: "barometer"), label: "Dashboard", small: "") {
                     DashboardView()
                 }
-                SidebarEntry(image: Image(systemName: "box.truck"), label: "Inventory", small: "Manage seed and sapling inventory") {
+                SidebarEntry(image: Image(systemName: "shippingbox"), label: "Inventory", small: "Manage seed and sapling inventory") {
                     InventoryView()
                 }
                 SidebarEntry(image: Image(systemName: "person.3.sequence"), label: "Workforce", small: "Manage workforce and volunteers") {
                     WorkforceView()
                 }
-                SidebarEntry(image: Image(systemName: "exclamationmark.triangle.fill"), label: "Incident Log", small: "See past incidents") {
+                SidebarEntry(image: Image(systemName: "exclamationmark.bubble"), label: "Incident Log", small: "See past incidents") {
                     IncidentLogView()
                 }
-                SidebarEntry(image: Image(systemName: "exclamationmark.triangle"), label: "Suppliers", small: "See available suppliers") {
+                SidebarEntry(image: Image(systemName: "figure.stand.line.dotted.figure.stand"), label: "Suppliers", small: "See available suppliers") {
                     SuppliersView()
                 }
                 SidebarEntry(image: Image(systemName: "book"), label: "Knowledge Base", small: "Learn about what you should grow") {

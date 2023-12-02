@@ -43,6 +43,5 @@ struct SidebarEntry<Content: View>: View {
                 }
             }
         }
-
     }
 }

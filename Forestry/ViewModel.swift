@@ -26,7 +26,9 @@ class ViewModel: ObservableObject {
         "Sandalwood": 150,
         "Teak": 60
     ]
-    @Published var incidents: [Incident] = []
+    @Published var incidents: [Incident] = [
+        .init(description: "Minor flooding in western front", severity: 0, date: Date.now)
+    ]
     @Published var inventoryLog: [InventoryLog] = [
         .init(name: "Mahogany", action: .bought, count: 100, date: Date.now),
         .init(name: "Sandalwood", action: .bought, count: 200, date: Date.now),
@@ -35,11 +37,12 @@ class ViewModel: ObservableObject {
     ]
     @Published var suppliers: [Supplier] = [
         .init(name: "Nuziveedu Seeds Ltd.", email: "contact@nuziveedu.in", product: "Saplings"),
-        .init(name: "Bharat Biotech", email: "contact@bharatbiotech.in", product: "Fertilizer"),
-        .init(name: "Tata Chemicals", email: "contact@tatachemicals.in", product: "Fertilizer"),
+        .init(name: "Bharat Biotech", email: "contact@bharatbiotech.in", product: "Fertilizer,  Pesticides"),
+        .init(name: "Tata Chemicals", email: "contact@tatachemicals.in", product: "Fertilizer, Pesticides"),
         .init(name: "Green my life", email: "info@greenmylife.in", product: "Saplings"),
         .init(name: "Indian Forest Service", email: "ifc@nic.in", product: "Saplings"),
-        .init(name: "Karnataka Forest Service", email: "kfs@karnataka.gov.in", product: "Saplings")
+        .init(name: "Karnataka Forest Service", email: "kfs@karnataka.gov.in", product: "Saplings"),
+        .init(name: "Union Carbide Limited", email: "info@ucl.in", product: "Pesticides")
     ]
 }
 
