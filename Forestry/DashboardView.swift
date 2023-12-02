@@ -29,6 +29,6 @@ struct DashboardView: View {
                 }
             }
         }
-        .padding(4)
+        .padding(10)
     }
 }

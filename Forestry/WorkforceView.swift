@@ -17,8 +17,22 @@ struct WorkforceView: View {
             
             Table(viewModel.teams) {
                 TableColumn("Name", value: \.id)
-                // TODO: fixme
+                TableColumn("Strength") { i in
+                    Text("\(i.count)")
+                }
             }
+            .padding(6)
+            
+            Text("Today: \(Date.getCurrentDate())")
         }
+        .padding(10)
+    }
+}
+
+extension Date {
+    static func getCurrentDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return dateFormatter.string(from: Date())
     }
 }

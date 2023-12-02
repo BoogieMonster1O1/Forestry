@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		642B27BE2B1AC968006390A6 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 642B27BD2B1AC968006390A6 /* OpenAI */; };
 		64CB4F302B1A4454004F2602 /* ForestryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F2F2B1A4454004F2602 /* ForestryApp.swift */; };
 		64CB4F322B1A4454004F2602 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F312B1A4454004F2602 /* ContentView.swift */; };
 		64CB4F342B1A4457004F2602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64CB4F332B1A4457004F2602 /* Assets.xcassets */; };
@@ -19,6 +20,11 @@
 		64CB4F4F2B1A5EA0004F2602 /* Published+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F4E2B1A5EA0004F2602 /* Published+Coding.swift */; };
 		64CB4F512B1A5F46004F2602 /* IncidentLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F502B1A5F46004F2602 /* IncidentLogView.swift */; };
 		64CB4F532B1A6232004F2602 /* TeamSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F522B1A6231004F2602 /* TeamSettingsView.swift */; };
+		64CB4F552B1A70C1004F2602 /* SetupSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F542B1A70C1004F2602 /* SetupSettingsView.swift */; };
+		64CB4F572B1A7B76004F2602 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F562B1A7B76004F2602 /* InventoryView.swift */; };
+		64CB4F612B1A8CAB004F2602 /* TreeStyleClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F602B1A8CAB004F2602 /* TreeStyleClassifier.mlmodel */; settings = {ATTRIBUTES = (codegen, ); }; };
+		64CB4F632B1A9A25004F2602 /* IncidentReportSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F622B1A9A25004F2602 /* IncidentReportSheet.swift */; };
+		64CB4F652B1ABFD5004F2602 /* SuppliersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F642B1ABFD5004F2602 /* SuppliersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,11 @@
 		64CB4F4E2B1A5EA0004F2602 /* Published+Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Coding.swift"; sourceTree = "<group>"; };
 		64CB4F502B1A5F46004F2602 /* IncidentLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentLogView.swift; sourceTree = "<group>"; };
 		64CB4F522B1A6231004F2602 /* TeamSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSettingsView.swift; sourceTree = "<group>"; };
+		64CB4F542B1A70C1004F2602 /* SetupSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupSettingsView.swift; sourceTree = "<group>"; };
+		64CB4F562B1A7B76004F2602 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		64CB4F602B1A8CAB004F2602 /* TreeStyleClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TreeStyleClassifier.mlmodel; sourceTree = "<group>"; };
+		64CB4F622B1A9A25004F2602 /* IncidentReportSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentReportSheet.swift; sourceTree = "<group>"; };
+		64CB4F642B1ABFD5004F2602 /* SuppliersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642B27BE2B1AC968006390A6 /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +80,7 @@
 		64CB4F2E2B1A4454004F2602 /* Forestry */ = {
 			isa = PBXGroup;
 			children = (
+				64CB4F5F2B1A8C9F004F2602 /* Models */,
 				64CB4F432B1A47A0004F2602 /* Sidebar */,
 				64CB4F2F2B1A4454004F2602 /* ForestryApp.swift */,
 				64CB4F312B1A4454004F2602 /* ContentView.swift */,
@@ -75,7 +88,11 @@
 				64CB4F482B1A56EF004F2602 /* ViewModel.swift */,
 				64CB4F4A2B1A5942004F2602 /* SettingsView.swift */,
 				64CB4F522B1A6231004F2602 /* TeamSettingsView.swift */,
+				64CB4F542B1A70C1004F2602 /* SetupSettingsView.swift */,
 				64CB4F4C2B1A5D4F004F2602 /* WorkforceView.swift */,
+				64CB4F642B1ABFD5004F2602 /* SuppliersView.swift */,
+				64CB4F562B1A7B76004F2602 /* InventoryView.swift */,
+				64CB4F622B1A9A25004F2602 /* IncidentReportSheet.swift */,
 				64CB4F502B1A5F46004F2602 /* IncidentLogView.swift */,
 				64CB4F332B1A4457004F2602 /* Assets.xcassets */,
 				64CB4F3D2B1A4457004F2602 /* Forestry.entitlements */,
@@ -101,6 +118,14 @@
 			path = Sidebar;
 			sourceTree = "<group>";
 		};
+		64CB4F5F2B1A8C9F004F2602 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64CB4F602B1A8CAB004F2602 /* TreeStyleClassifier.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,6 +142,9 @@
 			dependencies = (
 			);
 			name = Forestry;
+			packageProductDependencies = (
+				642B27BD2B1AC968006390A6 /* OpenAI */,
+			);
 			productName = Forestry;
 			productReference = 64CB4F2C2B1A4454004F2602 /* Forestry.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +173,9 @@
 				Base,
 			);
 			mainGroup = 64CB4F232B1A4454004F2602;
+			packageReferences = (
+				642B27BC2B1AC968006390A6 /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = 64CB4F2D2B1A4454004F2602 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -174,11 +205,16 @@
 				64CB4F532B1A6232004F2602 /* TeamSettingsView.swift in Sources */,
 				64CB4F4F2B1A5EA0004F2602 /* Published+Coding.swift in Sources */,
 				64CB4F4D2B1A5D4F004F2602 /* WorkforceView.swift in Sources */,
+				64CB4F632B1A9A25004F2602 /* IncidentReportSheet.swift in Sources */,
+				64CB4F572B1A7B76004F2602 /* InventoryView.swift in Sources */,
 				64CB4F492B1A56EF004F2602 /* ViewModel.swift in Sources */,
 				64CB4F452B1A47B1004F2602 /* SidebarEntry.swift in Sources */,
 				64CB4F472B1A5694004F2602 /* DashboardView.swift in Sources */,
 				64CB4F512B1A5F46004F2602 /* IncidentLogView.swift in Sources */,
 				64CB4F4B2B1A5942004F2602 /* SettingsView.swift in Sources */,
+				64CB4F652B1ABFD5004F2602 /* SuppliersView.swift in Sources */,
+				64CB4F552B1A70C1004F2602 /* SetupSettingsView.swift in Sources */,
+				64CB4F612B1A8CAB004F2602 /* TreeStyleClassifier.mlmodel in Sources */,
 				64CB4F322B1A4454004F2602 /* ContentView.swift in Sources */,
 				64CB4F302B1A4454004F2602 /* ForestryApp.swift in Sources */,
 			);
@@ -381,6 +417,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		642B27BC2B1AC968006390A6 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		642B27BD2B1AC968006390A6 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 642B27BC2B1AC968006390A6 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 64CB4F242B1A4454004F2602 /* Project object */;
 }

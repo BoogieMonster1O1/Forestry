@@ -10,8 +10,8 @@ import SwiftUI
 struct TeamSettingsView: View {
     @EnvironmentObject var viewModel: ViewModel
     @State var showSheet = false
-    @State var newTeamName: String
-    @State var newTeamStrength: Int
+    @State var newTeamName: String = ""
+    @State var newTeamStrength: Int = 0
     
     var body: some View {
         Form {
@@ -21,6 +21,7 @@ struct TeamSettingsView: View {
                     Text("\(i.count)")
                 }
             }
+            .padding(6)
             Button("Add team") {
                 showSheet = true
             }
@@ -38,9 +39,12 @@ struct TeamSettingsView: View {
                 Button("Add") {
                     viewModel.teams.append(Team(name: newTeamName, count: newTeamStrength))
                     showSheet = false
+                    newTeamName = ""
+                    newTeamStrength = 0
                 }
+                .keyboardShortcut(.return)
             }
-            .padding(4)
+            .padding(10)
         }
     }
 }

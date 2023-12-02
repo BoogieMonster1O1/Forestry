@@ -18,13 +18,16 @@ struct ContentView: View {
                     DashboardView()
                 }
                 SidebarEntry(image: Image(systemName: "box.truck"), label: "Inventory", small: "Manage seed and sapling inventory") {
-                    Text("inventory lol")
+                    InventoryView()
                 }
                 SidebarEntry(image: Image(systemName: "person.3.sequence"), label: "Workforce", small: "Manage workforce and volunteers") {
                     WorkforceView()
                 }
                 SidebarEntry(image: Image(systemName: "exclamationmark.triangle.fill"), label: "Incident Log", small: "See past incidents") {
                     IncidentLogView()
+                }
+                SidebarEntry(image: Image(systemName: "exclamationmark.triangle"), label: "Suppliers", small: "See available suppliers") {
+                    SuppliersView()
                 }
             }
             .listStyle(.sidebar)
@@ -47,24 +50,8 @@ struct ContentView: View {
             }
             Text("Select an item")
         }
-        .sheet(isPresented: $showIncidentReportSheet, content: incidentReportSheet)
-    }
-    
-    @ViewBuilder
-    func incidentReportSheet() -> some View {
-        VStack {
-            Text("Report an incident")
-                .font(.title)
-            HStack {
-                Button("Cancel") {
-                    showIncidentReportSheet = false
-                }
-                .keyboardShortcut(.escape)
-                Button("Report") {
-                    // TODO: add
-                    showIncidentReportSheet = false
-                }
-            }
+        .sheet(isPresented: $showIncidentReportSheet) {
+            IncidentReportSheet(showIncidentReportSheet: $showIncidentReportSheet)
         }
     }
 }

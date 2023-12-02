@@ -12,11 +12,7 @@ struct SettingsView: View {
     
     var body: some View {
         TabView {
-            Form {
-                TextField("Tree planting goal: ", value: $viewModel.goal, formatter: NumberFormatter())
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            }
+            SetupSettingsView()
             .tabItem({
                 Label("Setup", systemImage: "cup.and.saucer")
             })
