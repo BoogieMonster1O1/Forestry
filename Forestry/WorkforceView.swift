@@ -9,6 +9,9 @@ import SwiftUI
 
 struct WorkforceView: View {
     @EnvironmentObject var viewModel: ViewModel
+    @State var showSheet: Bool = false
+    @State var newTeamName: String = ""
+    @State var newTeamStrength: Int = 0
     
     var body: some View {
         VStack {
@@ -24,6 +27,30 @@ struct WorkforceView: View {
             .padding(6)
             
             Text("Today: \(Date.getCurrentDate())")
+            
+            Button("Add team") {
+                showSheet = true
+            }
+        }
+        .sheet(isPresented: $showSheet) {
+            VStack {
+                Text("Add team")
+                    .font(.title2)
+                TextField("Team name", text: $newTeamName)
+                TextField("Team strength", value: $newTeamStrength, formatter: NumberFormatter())
+                Button("Cancel") {
+                    showSheet = false
+                }
+                .keyboardShortcut(.escape)
+                Button("Add") {
+                    viewModel.teams.append(Team(name: newTeamName, count: newTeamStrength))
+                    showSheet = false
+                    newTeamName = ""
+                    newTeamStrength = 0
+                }
+                .keyboardShortcut(.return)
+            }
+            .padding(10)
         }
         .padding(10)
     }

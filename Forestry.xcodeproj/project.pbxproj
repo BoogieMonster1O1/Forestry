@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		642B27BE2B1AC968006390A6 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 642B27BD2B1AC968006390A6 /* OpenAI */; };
+		642B27C02B1AF4E8006390A6 /* KnowledgeBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B27BF2B1AF4E7006390A6 /* KnowledgeBaseView.swift */; };
 		64CB4F302B1A4454004F2602 /* ForestryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F2F2B1A4454004F2602 /* ForestryApp.swift */; };
 		64CB4F322B1A4454004F2602 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CB4F312B1A4454004F2602 /* ContentView.swift */; };
 		64CB4F342B1A4457004F2602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64CB4F332B1A4457004F2602 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		642B27BF2B1AF4E7006390A6 /* KnowledgeBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KnowledgeBaseView.swift; path = ../../../../../Applications/KnowledgeBaseView.swift; sourceTree = "<group>"; };
 		64CB4F2C2B1A4454004F2602 /* Forestry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forestry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64CB4F2F2B1A4454004F2602 /* ForestryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestryApp.swift; sourceTree = "<group>"; };
 		64CB4F312B1A4454004F2602 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				64CB4F4C2B1A5D4F004F2602 /* WorkforceView.swift */,
 				64CB4F642B1ABFD5004F2602 /* SuppliersView.swift */,
 				64CB4F562B1A7B76004F2602 /* InventoryView.swift */,
+				642B27BF2B1AF4E7006390A6 /* KnowledgeBaseView.swift */,
 				64CB4F622B1A9A25004F2602 /* IncidentReportSheet.swift */,
 				64CB4F502B1A5F46004F2602 /* IncidentLogView.swift */,
 				64CB4F332B1A4457004F2602 /* Assets.xcassets */,
@@ -210,6 +213,7 @@
 				64CB4F492B1A56EF004F2602 /* ViewModel.swift in Sources */,
 				64CB4F452B1A47B1004F2602 /* SidebarEntry.swift in Sources */,
 				64CB4F472B1A5694004F2602 /* DashboardView.swift in Sources */,
+				642B27C02B1AF4E8006390A6 /* KnowledgeBaseView.swift in Sources */,
 				64CB4F512B1A5F46004F2602 /* IncidentLogView.swift in Sources */,
 				64CB4F4B2B1A5942004F2602 /* SettingsView.swift in Sources */,
 				64CB4F652B1ABFD5004F2602 /* SuppliersView.swift in Sources */,

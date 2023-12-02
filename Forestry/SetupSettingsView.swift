@@ -19,7 +19,9 @@ struct SetupSettingsView: View {
     var body: some View {
         VStack {
             Form {
-                TextField("Tree planting goal: ", value: $viewModel.goal, formatter: NumberFormatter())
+                Toggle("Set goal", isOn: $viewModel.goalExists)
+                
+                TextField("Planting goal: ", value: $viewModel.goal, formatter: NumberFormatter())
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
@@ -117,7 +119,7 @@ struct TreeAiSuggestion: View {
                         Task {
                             do {
                                 let result = try await openAi.chats(query: ChatQuery(model: .gpt4, messages: [
-                                    Chat.init(role: .user, content: "Suggest trees for \(soilType) soil, \(climate), \(location), \(usedToCultivate ? "used to cultivate" : "not used to cultivate") in last month which land \(insurance ? "has" : "does not have") insurance against natural disasters.")
+                                    Chat.init(role: .user, content: "Suggest trees for \(soilType) soil, \(climate), \(location), \(usedToCultivate ? "used to cultivate" : "not used to cultivate") in last month which land \(insurance ? "has" : "does not have") insurance against natural disasters. Give me an answer within 40 words in a single paragraph.")
                                 ]))
                                 DispatchQueue.main.async {
                                     progressBar = false

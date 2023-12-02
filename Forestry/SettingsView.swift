@@ -17,10 +17,10 @@ struct SettingsView: View {
                 Label("Setup", systemImage: "cup.and.saucer")
             })
             
-            TeamSettingsView()
-            .tabItem({
-                Label("Teams", systemImage: "person.3")
-            })
+//            TeamSettingsView()
+//            .tabItem({
+//                Label("Teams", systemImage: "person.3")
+//            })
         }
     }
 }

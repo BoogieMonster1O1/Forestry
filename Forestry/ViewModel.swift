@@ -10,13 +10,29 @@ import OpenAI
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    @Published var goal: Float = 0
-    @Published var current: Float = 0
-    @Published var teams: [Team] = []
+    @Published var goalExists: Bool = false
+    @Published var goal: Float = 1000
+    @Published var current: Float = 305
+    @Published var teams: [Team] = [
+        .init(name: "Team Vyoma", count: 20),
+        .init(name: "Team Jatayu", count: 15),
+        .init(name: "ALAAP", count: 15),
+        .init(name: "CarvK", count: 10),
+        .init(name: "Ashwa Racing", count: 20),
+    ]
     @Published var trees: [String] = ["Mahogany", "Teak", "Shisham", "Sandalwood", "Oak", "Deodar"]
-    @Published var inventory: [String : Int] = [:]
+    @Published var inventory: [String : Int] = [
+        "Mahogany": 100,
+        "Sandalwood": 150,
+        "Teak": 60
+    ]
     @Published var incidents: [Incident] = []
-    @Published var inventoryLog: [InventoryLog] = []
+    @Published var inventoryLog: [InventoryLog] = [
+        .init(name: "Mahogany", action: .bought, count: 100, date: Date.now),
+        .init(name: "Sandalwood", action: .bought, count: 200, date: Date.now),
+        .init(name: "Sandalwood", action: .planted, count: 50, date: Date.now),
+        .init(name: "Teak", action: .bought, count: 60, date: Date.now)
+    ]
     @Published var suppliers: [Supplier] = [
         .init(name: "Nuziveedu Seeds Ltd.", email: "contact@nuziveedu.in", product: "Saplings"),
         .init(name: "Bharat Biotech", email: "contact@bharatbiotech.in", product: "Fertilizer"),
@@ -71,8 +87,8 @@ class Supplier: ObservableObject, Identifiable, Hashable {
 
 let token1 = "sk-MuyKFFQnAHZ9eo9BeozET3"
 let token2 = "BlbkFJZNZlotMqoQwMflOWfzML"
-let token3 = "sk-AWKjgVkk28z7zQQzBPW9"
-let token4 = "T3BlbkFJee6YxKYTYi4OidEayFaK"
+let token3 = "sk-v19COzARHEZzQmq1ff3MT"
+let token4 = "3BlbkFJjK7VK1DJXoqhdcfDIKui"
 let apiKey = token3 + token4
 let openAi = OpenAI.init(apiToken: apiKey)
 

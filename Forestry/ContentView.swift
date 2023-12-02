@@ -29,6 +29,9 @@ struct ContentView: View {
                 SidebarEntry(image: Image(systemName: "exclamationmark.triangle"), label: "Suppliers", small: "See available suppliers") {
                     SuppliersView()
                 }
+                SidebarEntry(image: Image(systemName: "book"), label: "Knowledge Base", small: "Learn about what you should grow") {
+                    KnowledgeBaseView()
+                }
             }
             .listStyle(.sidebar)
             .toolbar {
